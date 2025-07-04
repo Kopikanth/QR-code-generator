@@ -18,42 +18,90 @@ body{
     min-height: 250px;
     width: 420px;
     border-radius: 10px;
-    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding-left: 40px;
     padding-right: 40px;
-    box-sizing: border-box;
 }
 
 .container p{
-    position: absolute;
-    top: 30px;
     font-weight: 600;
+    margin-top: 30px;
+    width: 100%;
 }
 
-.inputBox{
-    position: absolute;
-    top: 70px;
-    left: 40px;
-    right: 40px;
+.input-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
     height: 50px;
+    width: 100%;
     border-radius: 5px;
     outline: none;
     border-width: 1px;
     padding: 10px;
 }
 
+.qr-code{
+    width: 200px;
+    height: 0px;
+    margin: 0px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.qr-code#show{
+    border: 1px solid rgb(230, 217, 217);
+    margin: 10px;
+    height: 200px;
+    display: flex;
+}
+
+.qr-img{
+    width: 170px;
+    height: 170px;
+}
+
 .generate{
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    right: 40px;
     height: 50px;
+    width: 100%;
     border-radius: 5px;
     border: none;
     background: rgb(65, 65, 223);
     color: white;
     font-size: 15px;
     font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+#error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+
+    25%{
+        transform: translateX(-2px);
+    }
+
+    50%{
+        transform: translateX(0);
+    }
+
+    75%{
+        transform: translateX(2px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
 }
